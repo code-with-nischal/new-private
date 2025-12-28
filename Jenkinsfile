@@ -4,7 +4,7 @@ node {
     stage('checkout code') {
         git branch: 'master',
             credentialsId: 'git',
-            url: 'https://github.com/code-with-nischal/testing.git'
+            url: 'https://github.com/code-with-nischal/new-private.git'
     }
 
 
