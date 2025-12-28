@@ -1,6 +1,10 @@
 node {
     def mavenHome = tool name: 'maven-1'
+echo "the node name is : -->${env.NODE_NAME}"
 
+echo "the job name is : --> ${env.JON_NAME}"
+
+echo "this build no is : --> ${env.BUILD_NUMBER}"
     stage('checkout code') {
         git branch: 'master',
             credentialsId: 'git',
