@@ -5,6 +5,8 @@ echo "the node name is : -->${env.NODE_NAME}"
 echo "the job name is : --> ${env.JON_NAME}"
 
 echo "this build no is : --> ${env.BUILD_NUMBER}"
+
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
     stage('checkout code') {
         git branch: 'master',
             credentialsId: 'git',
